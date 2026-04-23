@@ -1,0 +1,223 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# NOTE! Don't add files that are generated in specific
+# subdirectories here. Add them in the ".gitignore" file
+# in that subdirectory instead.
+#
+# NOTE! Please use 'git ls-files -i -c --exclude-per-directory=.gitignore'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules (sorted alphabetically)
+#
+# =========================
+# Kernel build artifacts
+# =========================
+*.o
+*.ko
+*.a
+*.so
+*.so.*
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.d
+*.tmp
+*.tmp_versions/
+*.order
+*.symvers
+Module.symvers
+modules.order
+
+# Kernel images
+vmlinux
+vmlinux.*
+bzImage
+zImage
+Image
+Image.gz
+Image.lz4
+uImage
+
+# Device tree blobs
+*.dtb
+*.dtbo
+
+# Kernel config outputs
+.config
+.config.old
+.config.cmd
+.config.*
+include/generated/
+arch/*/include/generated/
+
+# Build directories
+build/
+out/
+output/
+tmp/
+temp/
+
+# =========================
+# SONiC / Yocto-like build
+# =========================
+*.rootfs
+*.wic
+*.img
+*.bin
+*.iso
+*.qcow2
+
+# Package artifacts
+*.deb
+*.ipk
+*.rpm
+
+# Logs
+*.log
+log/
+logs/
+
+# Cache / downloads
+downloads/
+dl/
+cache/
+sstate-cache/
+
+# =========================
+# Python / scripts
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Editor / OS junk
+# =========================
+*~
+*.swp
+*.swo
+*.bak
+.DS_Store
+Thumbs.db
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# =========================
+# Git-specific
+# =========================
+.gitignore
+.gitmodules
+
+# =========================
+# Optional: ignore large blobs
+# =========================
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+
+
+# =========================
+# Kernel build artifacts (core)
+# =========================
+*.o
+*.cmd
+*.d
+*.tmp
+*.mod
+*.mod.c
+*.mod.o
+*.ko
+*.a
+*.so
+*.so.*
+
+*.order
+*.symvers
+Module.symvers
+modules.order
+
+# Kernel outputs
+vmlinux
+vmlinux.*
+System.map
+*.map
+*.syms
+*.S
+
+# Temporary vmlinux/kallsyms builds
+.tmp_vmlinux*
+.tmp_kallsyms*
+vmlinux-gdb.py
+
+# Version / generated headers
+.version
+include/config/
+
+# =========================
+# DTB / DTB lists
+# =========================
+arch/*/boot/dts/**/dtbs-list
+
+# =========================
+# Crypto / ASN.1 generated sources
+# =========================
+*.asn1.c
+*.asn1.h
+
+# =========================
+# Scripts generated parsers/lexers
+# =========================
+*.lex.c
+*.tab.c
+*.tab.h
+
+# =========================
+# Kernel headers / generated build artifacts
+# =========================
+kernel/bounds.s
+kernel/kheaders_data.tar.xz
+arch/*/kernel/asm-offsets.s
+arch/*/kvm/hyp-constants.s
+drivers/of/empty_root.dtb.S
+security/keys/**/tpm2key.asn1.*
+
+# =========================
+# Signing / certs (if auto-generated)
+# =========================
+certs/signing_key.*
+certs/x509.genkey
+
+# =========================
+# Modules metadata
+# =========================
+modules.builtin*
+
+# =========================
+# Kernel internal generated checks
+# =========================
+.checked-*
+
+# =========================
+# vmlinux intermediate build artifacts
+# =========================
+.vmlinux.*
+
+# =========================
+# scripts/mod generated files
+# =========================
+scripts/mod/*.s
+scripts/mod/*.o
+scripts/mod/devicetable-offsets.*
+
+# =========================
+# Local customization
+# =========================
+local.conf
+.env
